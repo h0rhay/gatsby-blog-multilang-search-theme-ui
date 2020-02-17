@@ -1,10 +1,24 @@
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
       allMarkdownRemark {
         edges {
           node {
-            frontmatter {
+            fields {
               slug
             }
           }
@@ -21,10 +35,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   posts.forEach(post => {
     actions.createPage({
-      path: post.node.frontmatter.slug,
+      path: post.node.fields.slug,
       component: require.resolve('./src/templates/post.js'),
       context: {
-        slug: post.node.frontmatter.slug
+        slug: post.node.fields.slug
       }
     })
   })

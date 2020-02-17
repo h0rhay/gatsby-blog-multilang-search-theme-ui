@@ -2,14 +2,16 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import SiteWrapConstrainer from "./siteWrapConstrainer"
+import styled from 'styled-components'
+
+const HeaderStyle = styled.header`
+  background: dodgerblue;
+  margin: 0 0 1.45rem 0;
+  padding: 2rem 0;
+`
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <HeaderStyle>
     <SiteWrapConstrainer>
       <h1 style={{ margin: 0 }}>
         <Link
@@ -23,7 +25,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </SiteWrapConstrainer>
-  </header>
+  </HeaderStyle>
 )
 
 Header.propTypes = {

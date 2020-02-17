@@ -7,9 +7,13 @@ const usePosts = () => {
         nodes {
           html
           id
+          excerpt
+          fields {
+            slug
+          }
           frontmatter {
             title
-            slug
+            tags
             published
           }
         }
@@ -17,12 +21,16 @@ const usePosts = () => {
     }
   `)
 
-  return data.allMarkdownRemark.nodes.map(post => ({
+  const filteredPosts = data.allMarkdownRemark.nodes.filter(node => !!node.frontmatter.published)
+
+  return filteredPosts.map(post => ({
     title: post.frontmatter.title,
-    slug: post.frontmatter.slug,
+    slug: post.fields.slug,
     published: post.frontmatter.published,
     html: post.html,
-    id: post.id
+    excerpt: post.excerpt,
+    id: post.id,
+    tags: post.frontmatter.tags
   }))
 }
 

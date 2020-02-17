@@ -5,12 +5,15 @@ import SiteWrapConstrainer from '../components/siteWrapConstrainer'
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
-        slug
         published
+        tags
       }
     }
   }
@@ -21,9 +24,9 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <SiteWrapConstrainer>
-        {console.log(data.markdownRemark)}
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <p>{post.frontmatter.tags.map(tag => <span>{tag} </span>)}</p>
         <Link to="/">&larr; back to all posts</Link>
       </SiteWrapConstrainer>
     </Layout>

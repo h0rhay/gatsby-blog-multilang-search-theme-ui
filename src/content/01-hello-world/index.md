@@ -1,7 +1,7 @@
 ---
 title: Hello World
-slug: hello-world
-published: 29-01-2020
+tags: [react, chocolate]
+published: 2020-01-01
 ---
 
 ## Hello from a new gatsby blog!!!

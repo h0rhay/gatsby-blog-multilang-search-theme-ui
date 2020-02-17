@@ -1,7 +1,7 @@
 ---
 title: Blog Post Two
-slug: blog-post-two
-published: "2019-11-01"
+tags: [react , strawberry]
+published: 2020-02-01
 ---
 
 ## So this is Blog Two !!!
