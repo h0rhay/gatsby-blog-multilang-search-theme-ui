@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import SiteWrapConstrainer from "./siteWrapConstrainer"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -9,13 +10,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+    <SiteWrapConstrainer>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -27,7 +22,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </SiteWrapConstrainer>
   </header>
 )
 

@@ -1,7 +1,7 @@
 ---
 title: Blog Post Two
 slug: blog-post-two
-published: 31-01-2020
+published: "2019-11-01"
 ---
 
 ## So this is Blog Two !!!
