@@ -57,20 +57,10 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 1rem;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #222;
-  }
-  strong {
-    color: #222;
-  }
   li {
     margin-top: 0.25rem;
   }
+
   input, textarea, select, button {
     font-family: inherit;
     font-size: 100%;
@@ -78,6 +68,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+  
   input, textarea, select {
     padding:0.5rem;
   }
