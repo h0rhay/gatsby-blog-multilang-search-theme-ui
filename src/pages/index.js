@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import DynamicImage from "../components/dynamicImage"
 import SEO from "../components/seo"
 import SiteWrapConstrainer from "../components/siteWrapConstrainer"
 
@@ -22,7 +22,7 @@ const IndexPage = () => (
       <div style={{ maxWidth: `300px`, margin: `0 auto`, textAlign: `center` }}>
         <hr style={{ marginTop: `4rem` }} />
         <h3>Oh, and a little Meerkat:</h3>
-        <Image src={`meerkat-by-dusan-smetana.jpg`} />
+        <DynamicImage src={`meerkat-by-dusan-smetana.jpg`} />
         <small>
           Photo by Dušan Smetana on Unsplash
         </small>

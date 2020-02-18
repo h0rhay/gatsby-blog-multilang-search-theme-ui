@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SiteWrapConstrainer from "../components/siteWrapConstrainer"
 import HomeLink from "../components/homeLink"
-import Image from '../components/Image'
+import DynamicImage from '../components/dynamicImage'
 
 const SecondPage = () => (
   <Layout>
@@ -14,7 +14,7 @@ const SecondPage = () => (
       <div style={{ maxWidth: `300px`, margin: `0 auto`, textAlign: `center` }}>
         <hr style={{ marginTop: `4rem` }} />
         <h3>We all love a Lollipop:</h3>
-        <Image src={`lollipop-by-jamie-albright.jpg`} />
+        <DynamicImage src={`lollipop-by-jamie-albright.jpg`} />
         <small>
           Photo by Jamie Albright on Unsplash
         </small>
