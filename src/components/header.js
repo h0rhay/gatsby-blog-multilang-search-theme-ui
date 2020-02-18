@@ -16,9 +16,10 @@ const HeaderStyle = styled.header`
       flex:3;
     }
     nav {
-      flex:1;
-      display:flex;
-      justify-content:space-between;
+      margin: 0;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
     }
     h2, a {
       color:white;

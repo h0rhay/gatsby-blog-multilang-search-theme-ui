@@ -6,8 +6,17 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 const GlobalStyle = createGlobalStyle`
+  html, body {
+    margin: 0;
+    color: #555;
+        > div {
+      margin-top: 0;
+    }
+  }
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol';
     font-size: calc(12px + 0.35vw); /* Responsive base font size */
     line-height: calc(12px + 1.05vw); /* Responsive Vertical Rhythm */
   }
@@ -38,9 +47,7 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     margin: calc(12px + 1.05vw) 0; /* Responsive margins */
   }
-  /* :root {
-    font-size: 62.5%;
-  } */
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -49,18 +56,7 @@ const GlobalStyle = createGlobalStyle`
   * + * {
     margin-top: 1rem;
   }
-  html,
-  body {
-    margin: 0;
-    color: #555;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol';
-    /* remove margin for the main div that Gatsby mounts into */
-    > div {
-      margin-top: 0;
-    }
-  }
+
   h1,
   h2,
   h3,
