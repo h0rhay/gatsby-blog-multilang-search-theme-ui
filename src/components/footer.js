@@ -11,9 +11,21 @@ const Footer = () => (
     <SiteWrapConstrainer>
       © {new Date().getFullYear()}, Built with
           {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <a
+        href="https://georgedesign.co.uk"
+        style={{
+          textDecoration: 'none'
+        }}
+      >
+        <span
+          role='img'
+          aria-label='love-link'
+        >
+          ❤️
+        </span>
+      </a>
     </SiteWrapConstrainer>
-  </FooterStyle>
+  </FooterStyle >
 )
 
 export default Footer

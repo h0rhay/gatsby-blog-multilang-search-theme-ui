@@ -52,6 +52,9 @@ const PostList = () => {
             <Link to={post.slug}>
               {post.title}
             </Link>
+            <p>
+              {post.excerpt}
+            </p>
           </li>
         ))}
       </ul>

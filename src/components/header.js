@@ -12,6 +12,14 @@ const HeaderStyle = styled.header`
     display:flex;
     align-items: center;
     justify-content: space-between;
+    h1 {
+      flex:3;
+    }
+    nav {
+      flex:1;
+      display:flex;
+      justify-content:space-between;
+    }
     h2, a {
       color:white;
       margin: 0;
@@ -33,9 +41,14 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <h2>
-        <Link to="/about/">About</Link>
-      </h2>
+      <nav>
+        <h2>
+          <Link to="/about/">About</Link>
+        </h2>
+        <h2>
+          <Link to="/blog/">Blog</Link>
+        </h2>
+      </nav>
     </SiteWrapConstrainer>
   </HeaderStyle>
 )

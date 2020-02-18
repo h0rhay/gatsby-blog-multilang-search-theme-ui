@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import HomeLink from '../components/homeLink'
 import SiteWrapConstrainer from '../components/siteWrapConstrainer'
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -26,8 +28,11 @@ const PostTemplate = ({ data }) => {
       <SiteWrapConstrainer>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <p><strong>Tags: </strong>{post.frontmatter.tags.map(tag => <span>{tag} </span>)}</p>
-        <Link to="/">&larr; back to all posts</Link>
+        <p>
+          <strong>Tags: </strong>
+          {post.frontmatter.tags.map((tag, i) => <span key={`tag-${i}`}>{(i ? ', ' : '')}{tag}</span>)}
+        </p>
+        <HomeLink />
       </SiteWrapConstrainer>
     </Layout>
   )
