@@ -8,9 +8,9 @@ import SiteWrapConstrainer from "../components/siteWrapConstrainer"
 const SecondPage = () => (
   <Layout>
     <SiteWrapConstrainer>
-      <SEO title="Page two" />
-      <h1>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
+      <SEO title="About Page" />
+      <h1>Hi from the About page</h1>
+      <p>Welcome to another lovely page where you can add some more info about your lovely project./</p>
       <Link to="/">Go back to the homepage</Link>
     </SiteWrapConstrainer>
   </Layout>

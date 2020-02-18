@@ -8,6 +8,15 @@ const HeaderStyle = styled.header`
   background: dodgerblue;
   margin: 0 0 1.45rem 0;
   padding: 2rem 0;
+  > div {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    h2, a {
+      color:white;
+      margin: 0;
+    }
+  }
 `
 
 const Header = ({ siteTitle }) => (
@@ -24,6 +33,9 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <h2>
+        <Link to="/about/">About</Link>
+      </h2>
     </SiteWrapConstrainer>
   </HeaderStyle>
 )

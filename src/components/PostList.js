@@ -6,6 +6,7 @@ const PostList = () => {
   const allPosts = usePosts()
 
   const emptyQuery = ''
+
   const [search, setSearch] = useState({
     filteredData: [],
     query: emptyQuery

@@ -26,7 +26,7 @@ const PostTemplate = ({ data }) => {
       <SiteWrapConstrainer>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <p>{post.frontmatter.tags.map(tag => <span>{tag} </span>)}</p>
+        <p><strong>Tags: </strong>{post.frontmatter.tags.map(tag => <span>{tag} </span>)}</p>
         <Link to="/">&larr; back to all posts</Link>
       </SiteWrapConstrainer>
     </Layout>
