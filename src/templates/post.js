@@ -16,6 +16,8 @@ export const query = graphql`
         title
         published
         tags
+        parent
+        order
       }
     }
   }
