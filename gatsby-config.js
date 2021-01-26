@@ -20,6 +20,7 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
