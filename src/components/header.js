@@ -46,9 +46,6 @@ const Header = ({ siteTitle }) => (
         <h2>
           <Link to="/about-us/">About</Link>
         </h2>
-        <h2>
-          <Link to="/blog/">Blog</Link>
-        </h2>
       </nav>
     </SiteWrapConstrainer>
   </HeaderStyle>
