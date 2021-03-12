@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
     <SiteWrapConstrainer>
       <SEO title="Home" />
-      <h1>Welcome to Gatsby Simplz!</h1>
+      <h1>Welcome to Gatsby Simplz Stackbitness!</h1>
       <h2>A super simple Gatsby Starter site with the following functionality:</h2>
       <ul>
         <li>Markdown blog post pages</li>
